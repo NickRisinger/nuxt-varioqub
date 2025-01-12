@@ -6,7 +6,7 @@ type VarioqubState = {
 	testids: Array<number>;
 };
 
-export default function useVarioqub() {
+export function useVarioqub() {
 	const state = useState<VarioqubState>('varioqubState', () => ({
 		flags: {},
 		experiments: '',
