@@ -1,19 +1,35 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit';
+import defu from 'defu';
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions {
+	clientId: number;
+	cookieName?: string;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	clientFeatures?: any;
+	mode?: 'all' | 'server' | 'client';
+}
 
 export default defineNuxtModule<ModuleOptions>({
-  meta: {
-    name: 'nuxt-varioqub',
-    configKey: 'varioqub',
-  },
-  // Default configuration options of the Nuxt module
-  defaults: {},
-  setup(_options, _nuxt) {
-    const resolver = createResolver(import.meta.url)
+	meta: {
+		name: 'nuxt-varioqub',
+		configKey: 'varioqub',
+	},
+	defaults: {
+		cookieName: '_ymab_param',
+		clientFeatures: {},
+		mode: 'server',
+	},
+	setup(options, nuxt) {
+		const resolver = createResolver(import.meta.url);
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
-  },
-})
+		nuxt.options.runtimeConfig.public.varioqub = defu(
+			nuxt.options.runtimeConfig.public.varioqub,
+			options,
+		);
+
+		addPlugin({
+			src: resolver.resolve('./runtime/plugin.server.ts'),
+			mode: 'server',
+		});
+	},
+});
