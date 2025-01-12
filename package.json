@@ -1,7 +1,7 @@
 {
   "name": "nuxt-varioqub",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Nuxt module for seamless integration with Yandex Varioqub, enabling A/B testing in your application",
   "author": "Nick Risinger <boozy044@gmail.com>",
   "license": "MIT",
