@@ -2,7 +2,7 @@
   "name": "nuxt-varioqub",
   "type": "module",
   "version": "1.0.0",
-  "description": "A lightweight module for integrating Yandex.Metrika into Nuxt, enabling easy analytics setup and tracking user interactions",
+  "description": "A Nuxt module for seamless integration with Yandex Varioqub, enabling A/B testing in your application",
   "author": "Nick Risinger <boozy044@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/NickRisinger/nuxt-varioqub#readme",
