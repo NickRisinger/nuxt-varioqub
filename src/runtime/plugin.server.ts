@@ -11,6 +11,7 @@ export default defineNuxtPlugin(async () => {
 	const state = useState('varioqubState', () => ({
 		flags: {},
 		experiments: '',
+		testids: [],
 	}));
 	const config = useRuntimeConfig();
 	const route = useRoute();
@@ -33,4 +34,5 @@ export default defineNuxtPlugin(async () => {
 
 	state.value.flags = response.flags;
 	state.value.experiments = response.experiments;
+	state.value.testids = response.testids;
 });

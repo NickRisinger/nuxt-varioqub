@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit';
+import { defineNuxtModule, createResolver, addPlugin, addImports } from '@nuxt/kit';
 import defu from 'defu';
 
 export interface ModuleOptions {
@@ -30,6 +30,11 @@ export default defineNuxtModule<ModuleOptions>({
 		addPlugin({
 			src: resolver.resolve('./runtime/plugin.server.ts'),
 			mode: 'server',
+		});
+
+		addImports({
+			name: 'useVarioqub',
+			from: resolver.resolve('./runtime/composables/useVarioqub'),
 		});
 	},
 });
