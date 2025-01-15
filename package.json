@@ -36,10 +36,14 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build build",
-    "dev": "nuxi dev playground",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "prepack": "nuxt-module-build && npm run client:build",
+    "client:build": "nuxi generate client",
+    "client:dev": "nuxi dev client --port 3300",
+    "dev": "npm run play:dev",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare client",
+    "prepare": "nuxi prepare client",
+    "play:dev": "nuxi dev playground",
+    "play:prod": "npm run prepack && nuxi dev playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -49,10 +53,12 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.15.1",
-    "defu": "^6.1.4"
+    "defu": "^6.1.4",
+    "sirv": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.7.0",
+    "@nuxt/devtools-ui-kit": "^1.7.0",
     "@nuxt/eslint-config": "^0.7.5",
     "@nuxt/module-builder": "^0.8.4",
     "@nuxt/schema": "^3.15.1",

@@ -1,5 +1,6 @@
 import { defineNuxtModule, createResolver, addPlugin, addImports } from '@nuxt/kit';
 import defu from 'defu';
+import { setupDevToolsUI } from './devtools';
 
 export interface ModuleOptions {
 	clientId: number;
@@ -40,5 +41,7 @@ export default defineNuxtModule<ModuleOptions>({
 			name: 'useVarioqub',
 			from: resolver.resolve('./runtime/composables/useVarioqub'),
 		});
+
+		setupDevToolsUI(nuxt, resolver);
 	},
 });
