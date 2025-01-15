@@ -23,7 +23,7 @@ A Nuxt module for seamless integration with Yandex Varioqub, enabling A/B testin
 Install the module to your Nuxt application with one command:
 
 ```bash
-npx nuxi module add nuxt-varioqub
+npx nuxi module add @yandex-unofficial/nuxt-varioqub
 ```
 
 That's it! You can now use Nuxt Varioqub in your Nuxt app ✨
@@ -62,14 +62,14 @@ That's it! You can now use Nuxt Varioqub in your Nuxt app ✨
 
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-varioqub/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/nuxt-varioqub
+[npm-version-src]: https://img.shields.io/npm/v/@yandex-unofficial/nuxt-varioqub/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/@yandex-unofficial/nuxt-varioqub
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-varioqub.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-downloads-href]: https://npm.chart.dev/nuxt-varioqub
+[npm-downloads-src]: https://img.shields.io/npm/dm/@yandex-unofficial/nuxt-varioqub.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npm.chart.dev/@yandex-unofficial/nuxt-varioqub
 
-[license-src]: https://img.shields.io/npm/l/nuxt-varioqub.svg?style=flat&colorA=020420&colorB=00DC82
-[license-href]: https://npmjs.com/package/nuxt-varioqub
+[license-src]: https://img.shields.io/npm/l/@yandex-unofficial/nuxt-varioqub.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/@yandex-unofficial/nuxt-varioqub
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
