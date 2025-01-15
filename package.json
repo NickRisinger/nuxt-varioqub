@@ -1,16 +1,16 @@
 {
-  "name": "nuxt-varioqub",
+  "name": "@yandex-unofficial/nuxt-varioqub",
   "type": "module",
-  "version": "1.0.2",
+  "version": "0.1.0",
   "description": "A Nuxt module for seamless integration with Yandex Varioqub, enabling A/B testing in your application",
   "author": "Nick Risinger <boozy044@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/NickRisinger/nuxt-varioqub#readme",
+  "homepage": "https://github.com/yandex-unofficial/nuxt-varioqub#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NickRisinger/nuxt-varioqub.git"
+    "url": "git+https://github.com/yandex-unofficial/nuxt-varioqub.git"
   },
-  "bugs": "https://github.com/NickRisinger/nuxt-varioqub/issues",
+  "bugs": "https://github.com/yandex-unofficial/nuxt-varioqub/issues",
   "keywords": [
     "nuxt",
     "yandex",
@@ -42,6 +42,7 @@
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"

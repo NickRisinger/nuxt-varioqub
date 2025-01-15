@@ -27,6 +27,10 @@ export default defineNuxtModule<ModuleOptions>({
 			options,
 		);
 
+		if (!options.clientId) {
+			return;
+		}
+
 		addPlugin({
 			src: resolver.resolve('./runtime/plugin.server.ts'),
 			mode: 'server',
